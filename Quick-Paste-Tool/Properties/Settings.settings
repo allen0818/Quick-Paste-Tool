@@ -1,7 +1,36 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Quick_Paste_Tool.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="btn1_pref" Type="System.String" Scope="User">
+      <Value Profile="(Default)">範本1;範本1的文字內容</Value>
+    </Setting>
+    <Setting Name="btn2_pref" Type="System.String" Scope="User">
+      <Value Profile="(Default)">範本2;範本2的文字內容</Value>
+    </Setting>
+    <Setting Name="btn3_pref" Type="System.String" Scope="User">
+      <Value Profile="(Default)">範本3;範本3的文字內容</Value>
+    </Setting>
+    <Setting Name="btn4_pref" Type="System.String" Scope="User">
+      <Value Profile="(Default)">範本4;範本4的文字內容</Value>
+    </Setting>
+    <Setting Name="btn5_pref" Type="System.String" Scope="User">
+      <Value Profile="(Default)">範本5;範本5的文字內容</Value>
+    </Setting>
+    <Setting Name="btn6_pref" Type="System.String" Scope="User">
+      <Value Profile="(Default)">範本6;範本6的文字內容</Value>
+    </Setting>
+    <Setting Name="btn7_pref" Type="System.String" Scope="User">
+      <Value Profile="(Default)">範本7;範本7的文字內容</Value>
+    </Setting>
+    <Setting Name="btn8_pref" Type="System.String" Scope="User">
+      <Value Profile="(Default)">範本8;範本8的文字內容</Value>
+    </Setting>
+    <Setting Name="btn9_pref" Type="System.String" Scope="User">
+      <Value Profile="(Default)">範本9;範本9的文字內容</Value>
+    </Setting>
+    <Setting Name="btn10_pref" Type="System.String" Scope="User">
+      <Value Profile="(Default)">範本10;範本10的文字內容</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>
