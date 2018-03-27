@@ -11,6 +11,9 @@ namespace Quick_Paste_Tool
 {
     public partial class Form1 : Form
     {
+        private Button _currButton = null;
+        private bool _isCurrEditMode = false;
+
         protected override CreateParams CreateParams
         {
             get
@@ -32,9 +35,10 @@ namespace Quick_Paste_Tool
 
         private void LoadDefaultSetting()
         {
-            //Form Size For Collapsed: 395, 150
             CheckBox_StayOnTop.Checked = true;
             RadioButton_RunningMode.Checked = true;
+            GroupBox_EditTemplate.Visible = false;
+            this.Height = 150;
 
             button1.Text = Properties.Settings.Default.btn1_pref.Split(';')[0];
             button2.Text = Properties.Settings.Default.btn2_pref.Split(';')[0];
@@ -56,11 +60,32 @@ namespace Quick_Paste_Tool
                 this.TopMost = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void RadioButton_Mode_CheckedChanged(object sender, EventArgs e)
         {
-            //Clipboard.SetText("範本1的文字內容");
-            Clipboard.SetText(Properties.Settings.Default.btn1_pref);
-            SendKeys.Send(Clipboard.GetText());
+            if (RadioButton_EditMode.Checked)
+            {
+                _isCurrEditMode = true;
+                SetupUIForEditMode();
+            }
+            else
+            {
+                _isCurrEditMode = false;
+                SetupUIForRunningMode();
+            }
+        }
+
+        private void SetupUIForRunningMode()
+        {
+            GroupBox_EditTemplate.Visible = false;
+            this.Height = 150;
+        }
+
+        private void SetupUIForEditMode()
+        {
+            GroupBox_EditTemplate.Visible = true;
+            this.Height = 330;
+
+            TextBox_Title.Enabled = true;
         }
     }
 }
