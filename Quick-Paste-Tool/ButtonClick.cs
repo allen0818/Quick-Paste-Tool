@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Quick_Paste_Tool
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         private void button1_Click(object sender, EventArgs e)
         {
@@ -65,52 +65,22 @@ namespace Quick_Paste_Tool
         {
             _currButton = sender as Button;
             var currPrefSetting = GetPrefSettingByButton(_currButton);
-
-            if (_isCurrEditMode)
-                LoadCurrPrefSetting(currPrefSetting);
-
-            else
-                PasteCurrPrefSetting(currPrefSetting);
-        }
-
-        private void Button_Save_Click(object sender, EventArgs e)
-        {
-            var currPrefSetting = GetPrefSettingByButton(_currButton);
-            currPrefSetting = String.Format("{0};{1}", TextBox_Title.Text.Trim(), RichTextBox_Content.Text);
-        }
-
-        private void Button_Cancel_Click(object sender, EventArgs e)
-        {
-            var currPrefSetting = GetPrefSettingByButton(_currButton);
-            LoadCurrPrefSetting(currPrefSetting);
-        }
-
-        private void LoadCurrPrefSetting(String currPrefSetting)
-        {
-            if (!String.IsNullOrEmpty(currPrefSetting) &&
-                currPrefSetting.Split(';').Count() >= 2)
+            if (_isCurrInEditMode)
             {
-                TextBox_Title.Text = currPrefSetting.Split(';')[0];
-                RichTextBox_Content.Text = currPrefSetting.Split(';')[1];
+                OpenEditFormIfNeed();
+
+                if (_editForm != null)
+                    _editForm.LoadCurrPrefSetting(currPrefSetting);
             }
-        }
-
-        private void PasteCurrPrefSetting(string currPrefSetting)
-        {
-            if (!String.IsNullOrEmpty(currPrefSetting) &&
-                currPrefSetting.Split(';').Count() >= 2)
+            else
             {
-                string pasteValue = currPrefSetting.Split(';')[1];
-
-                Clipboard.SetText(pasteValue);
-                SendKeys.Send(Clipboard.GetText());
+                PasteCurrPrefSetting(currPrefSetting);
             }
         }
 
         private static string GetPrefSettingByButton(Button currButton)
         {
             string currPrefSetting = String.Empty;
-
             switch (currButton.Name)
             {
                 case "button1":
@@ -155,6 +125,18 @@ namespace Quick_Paste_Tool
             }
 
             return currPrefSetting;
+        }
+
+        private void PasteCurrPrefSetting(string currPrefSetting)
+        {
+            if (!String.IsNullOrEmpty(currPrefSetting) &&
+                currPrefSetting.Split(';').Count() >= 2)
+            {
+                string pasteValue = currPrefSetting.Split(';')[1];
+
+                Clipboard.SetText(pasteValue);
+                SendKeys.Send(Clipboard.GetText());
+            }
         }
     }
 }

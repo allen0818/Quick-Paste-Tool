@@ -9,23 +9,24 @@ using System.Windows.Forms;
 
 namespace Quick_Paste_Tool
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        private Button _currButton = null;
-        private bool _isCurrEditMode = false;
+        public Button _currButton = null;
+        private bool _isCurrInEditMode = false;
+        public EditForm _editForm = null;
 
         protected override CreateParams CreateParams
         {
             get
             {
                 CreateParams cp = base.CreateParams;
-                cp.ExStyle |= (int) 0x08000000L; //WS_DISABLED
+                cp.ExStyle |= (int)0x08000000L; //WS_DISABLED
 
                 return cp;
             }
         }
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
 
@@ -37,9 +38,12 @@ namespace Quick_Paste_Tool
         {
             CheckBox_StayOnTop.Checked = true;
             RadioButton_RunningMode.Checked = true;
-            GroupBox_EditTemplate.Visible = false;
-            this.Height = 150;
 
+            LoadPrefSetting();
+        }
+
+        public void LoadPrefSetting()
+        {
             button1.Text = Properties.Settings.Default.btn1_pref.Split(';')[0];
             button2.Text = Properties.Settings.Default.btn2_pref.Split(';')[0];
             button3.Text = Properties.Settings.Default.btn3_pref.Split(';')[0];
@@ -64,28 +68,36 @@ namespace Quick_Paste_Tool
         {
             if (RadioButton_EditMode.Checked)
             {
-                _isCurrEditMode = true;
-                SetupUIForEditMode();
+                _isCurrInEditMode = true;
+                OpenEditFormIfNeed();
             }
             else
             {
-                _isCurrEditMode = false;
-                SetupUIForRunningMode();
+                _isCurrInEditMode = false;
+                CloseEditFormIfNeed();
             }
         }
 
-        private void SetupUIForRunningMode()
+        private void OpenEditFormIfNeed()
         {
-            GroupBox_EditTemplate.Visible = false;
-            this.Height = 150;
+            if (_editForm == null)
+            {
+                _editForm = new EditForm(this);
+                _editForm.StartPosition = FormStartPosition.Manual;
+                _editForm.Location = new Point(this.Left, this.Top + this.Height + 15);
+                _editForm.Show();
+            }
         }
 
-        private void SetupUIForEditMode()
+        private void CloseEditFormIfNeed()
         {
-            GroupBox_EditTemplate.Visible = true;
-            this.Height = 330;
+            if (_editForm != null)
+            {
+                _editForm.Close();
 
-            TextBox_Title.Enabled = true;
+                _editForm = null;
+                _currButton = null;
+            }
         }
     }
 }
