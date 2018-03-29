@@ -137,7 +137,7 @@ namespace Quick_Paste_Tool
                 string pasteValue = currPrefSetting.Split(';')[1];
 
                 Clipboard.SetText(pasteValue);
-                SendKeys.Send(Clipboard.GetText());
+                SendKeys.Send("^{v}");
             }
         }
     }
