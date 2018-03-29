@@ -28,61 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.CheckBox_StayOnTop = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.RadioButton_EditMode = new System.Windows.Forms.RadioButton();
             this.RadioButton_RunningMode = new System.Windows.Forms.RadioButton();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.ToolTip_Title = new System.Windows.Forms.ToolTip(this.components);
+            this.GroupBox_Hotkey = new System.Windows.Forms.GroupBox();
+            this.Button10 = new System.Windows.Forms.Button();
+            this.Button9 = new System.Windows.Forms.Button();
+            this.Button8 = new System.Windows.Forms.Button();
+            this.Button7 = new System.Windows.Forms.Button();
+            this.Button6 = new System.Windows.Forms.Button();
+            this.Button5 = new System.Windows.Forms.Button();
+            this.Button4 = new System.Windows.Forms.Button();
+            this.Button3 = new System.Windows.Forms.Button();
+            this.Button2 = new System.Windows.Forms.Button();
+            this.Button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.GroupBox_Hotkey.SuspendLayout();
             this.SuspendLayout();
             // 
             // CheckBox_StayOnTop
             // 
             this.CheckBox_StayOnTop.AutoSize = true;
-            this.CheckBox_StayOnTop.Location = new System.Drawing.Point(301, 14);
+            this.CheckBox_StayOnTop.Location = new System.Drawing.Point(304, 12);
             this.CheckBox_StayOnTop.Name = "CheckBox_StayOnTop";
             this.CheckBox_StayOnTop.Size = new System.Drawing.Size(72, 16);
             this.CheckBox_StayOnTop.TabIndex = 0;
             this.CheckBox_StayOnTop.Text = "保持置頂";
             this.CheckBox_StayOnTop.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(10, 48);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(62, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "範本1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 17);
+            this.label1.Location = new System.Drawing.Point(12, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "當前模式";
+            this.label1.Text = "目前模式：";
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.RadioButton_EditMode);
             this.panel1.Controls.Add(this.RadioButton_RunningMode);
-            this.panel1.Location = new System.Drawing.Point(79, 10);
+            this.panel1.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.panel1.Location = new System.Drawing.Point(80, 7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(136, 25);
+            this.panel1.Size = new System.Drawing.Size(143, 25);
             this.panel1.TabIndex = 5;
             // 
             // RadioButton_EditMode
@@ -99,7 +94,7 @@
             // 
             this.RadioButton_RunningMode.AutoSize = true;
             this.RadioButton_RunningMode.Checked = true;
-            this.RadioButton_RunningMode.Location = new System.Drawing.Point(8, 5);
+            this.RadioButton_RunningMode.Location = new System.Drawing.Point(10, 5);
             this.RadioButton_RunningMode.Name = "RadioButton_RunningMode";
             this.RadioButton_RunningMode.Size = new System.Drawing.Size(59, 16);
             this.RadioButton_RunningMode.TabIndex = 5;
@@ -108,119 +103,143 @@
             this.RadioButton_RunningMode.UseVisualStyleBackColor = true;
             this.RadioButton_RunningMode.CheckedChanged += new System.EventHandler(this.RadioButton_Mode_CheckedChanged);
             // 
-            // button2
+            // ToolTip_Title
             // 
-            this.button2.Location = new System.Drawing.Point(84, 48);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(62, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "範本2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.ToolTip_Title.ShowAlways = true;
             // 
-            // button3
+            // GroupBox_Hotkey
             // 
-            this.button3.Location = new System.Drawing.Point(158, 48);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(62, 23);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "範本3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.GroupBox_Hotkey.Controls.Add(this.Button10);
+            this.GroupBox_Hotkey.Controls.Add(this.Button9);
+            this.GroupBox_Hotkey.Controls.Add(this.Button8);
+            this.GroupBox_Hotkey.Controls.Add(this.Button7);
+            this.GroupBox_Hotkey.Controls.Add(this.Button6);
+            this.GroupBox_Hotkey.Controls.Add(this.Button5);
+            this.GroupBox_Hotkey.Controls.Add(this.Button4);
+            this.GroupBox_Hotkey.Controls.Add(this.Button3);
+            this.GroupBox_Hotkey.Controls.Add(this.Button2);
+            this.GroupBox_Hotkey.Controls.Add(this.Button1);
+            this.GroupBox_Hotkey.Location = new System.Drawing.Point(9, 33);
+            this.GroupBox_Hotkey.Name = "GroupBox_Hotkey";
+            this.GroupBox_Hotkey.Size = new System.Drawing.Size(366, 72);
+            this.GroupBox_Hotkey.TabIndex = 15;
+            this.GroupBox_Hotkey.TabStop = false;
             // 
-            // button4
+            // Button10
             // 
-            this.button4.Location = new System.Drawing.Point(232, 48);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(62, 23);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "範本4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.Button10.Location = new System.Drawing.Point(300, 42);
+            this.Button10.Name = "Button10";
+            this.Button10.Size = new System.Drawing.Size(62, 23);
+            this.Button10.TabIndex = 24;
+            this.Button10.Text = "範本10";
+            this.Button10.UseVisualStyleBackColor = true;
+            this.Button10.Click += new System.EventHandler(this.Button10_Click);
             // 
-            // button5
+            // Button9
             // 
-            this.button5.Location = new System.Drawing.Point(306, 48);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(62, 23);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "範本5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.Button9.Location = new System.Drawing.Point(226, 42);
+            this.Button9.Name = "Button9";
+            this.Button9.Size = new System.Drawing.Size(62, 23);
+            this.Button9.TabIndex = 23;
+            this.Button9.Text = "範本9";
+            this.Button9.UseVisualStyleBackColor = true;
+            this.Button9.Click += new System.EventHandler(this.Button9_Click);
             // 
-            // button10
+            // Button8
             // 
-            this.button10.Location = new System.Drawing.Point(306, 76);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(62, 23);
-            this.button10.TabIndex = 14;
-            this.button10.Text = "範本10";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.Button8.Location = new System.Drawing.Point(152, 42);
+            this.Button8.Name = "Button8";
+            this.Button8.Size = new System.Drawing.Size(62, 23);
+            this.Button8.TabIndex = 22;
+            this.Button8.Text = "範本8";
+            this.Button8.UseVisualStyleBackColor = true;
+            this.Button8.Click += new System.EventHandler(this.Button8_Click);
             // 
-            // button9
+            // Button7
             // 
-            this.button9.Location = new System.Drawing.Point(232, 76);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(62, 23);
-            this.button9.TabIndex = 13;
-            this.button9.Text = "範本9";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.Button7.Location = new System.Drawing.Point(78, 42);
+            this.Button7.Name = "Button7";
+            this.Button7.Size = new System.Drawing.Size(62, 23);
+            this.Button7.TabIndex = 21;
+            this.Button7.Text = "範本7";
+            this.Button7.UseVisualStyleBackColor = true;
+            this.Button7.Click += new System.EventHandler(this.Button7_Click);
             // 
-            // button8
+            // Button6
             // 
-            this.button8.Location = new System.Drawing.Point(158, 76);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(62, 23);
-            this.button8.TabIndex = 12;
-            this.button8.Text = "範本8";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.Button6.Location = new System.Drawing.Point(4, 42);
+            this.Button6.Name = "Button6";
+            this.Button6.Size = new System.Drawing.Size(62, 23);
+            this.Button6.TabIndex = 20;
+            this.Button6.Text = "範本6";
+            this.Button6.UseVisualStyleBackColor = true;
+            this.Button6.Click += new System.EventHandler(this.Button6_Click);
             // 
-            // button7
+            // Button5
             // 
-            this.button7.Location = new System.Drawing.Point(84, 76);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(62, 23);
-            this.button7.TabIndex = 11;
-            this.button7.Text = "範本7";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.Button5.Location = new System.Drawing.Point(300, 14);
+            this.Button5.Name = "Button5";
+            this.Button5.Size = new System.Drawing.Size(62, 23);
+            this.Button5.TabIndex = 19;
+            this.Button5.Text = "範本5";
+            this.Button5.UseVisualStyleBackColor = true;
+            this.Button5.Click += new System.EventHandler(this.Button5_Click);
             // 
-            // button6
+            // Button4
             // 
-            this.button6.Location = new System.Drawing.Point(10, 76);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(62, 23);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "範本6";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.Button4.Location = new System.Drawing.Point(226, 14);
+            this.Button4.Name = "Button4";
+            this.Button4.Size = new System.Drawing.Size(62, 23);
+            this.Button4.TabIndex = 18;
+            this.Button4.Text = "範本4";
+            this.Button4.UseVisualStyleBackColor = true;
+            this.Button4.Click += new System.EventHandler(this.Button4_Click);
+            // 
+            // Button3
+            // 
+            this.Button3.Location = new System.Drawing.Point(152, 14);
+            this.Button3.Name = "Button3";
+            this.Button3.Size = new System.Drawing.Size(62, 23);
+            this.Button3.TabIndex = 17;
+            this.Button3.Text = "範本3";
+            this.Button3.UseVisualStyleBackColor = true;
+            this.Button3.Click += new System.EventHandler(this.Button3_Click);
+            // 
+            // Button2
+            // 
+            this.Button2.Location = new System.Drawing.Point(78, 14);
+            this.Button2.Name = "Button2";
+            this.Button2.Size = new System.Drawing.Size(62, 23);
+            this.Button2.TabIndex = 16;
+            this.Button2.Text = "範本2";
+            this.Button2.UseVisualStyleBackColor = true;
+            this.Button2.Click += new System.EventHandler(this.Button2_Click);
+            // 
+            // Button1
+            // 
+            this.Button1.Location = new System.Drawing.Point(4, 14);
+            this.Button1.Name = "Button1";
+            this.Button1.Size = new System.Drawing.Size(62, 23);
+            this.Button1.TabIndex = 15;
+            this.Button1.Text = "範本1";
+            this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 112);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(384, 112);
+            this.Controls.Add(this.GroupBox_Hotkey);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.CheckBox_StayOnTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "MainForm";
             this.Text = "Quick Paste Tool v1.0";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.GroupBox_Hotkey.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,20 +248,22 @@
         #endregion
 
         private System.Windows.Forms.CheckBox CheckBox_StayOnTop;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton RadioButton_EditMode;
         private System.Windows.Forms.RadioButton RadioButton_RunningMode;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ToolTip ToolTip_Title;
+        private System.Windows.Forms.GroupBox GroupBox_Hotkey;
+        private System.Windows.Forms.Button Button10;
+        private System.Windows.Forms.Button Button9;
+        private System.Windows.Forms.Button Button8;
+        private System.Windows.Forms.Button Button7;
+        private System.Windows.Forms.Button Button6;
+        private System.Windows.Forms.Button Button5;
+        private System.Windows.Forms.Button Button4;
+        private System.Windows.Forms.Button Button3;
+        private System.Windows.Forms.Button Button2;
+        private System.Windows.Forms.Button Button1;
     }
 }
 

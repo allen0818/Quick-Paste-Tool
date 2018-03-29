@@ -11,52 +11,52 @@ namespace Quick_Paste_Tool
 {
     public partial class MainForm : Form
     {
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             DoButtonClickJob(sender);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             DoButtonClickJob(sender);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             DoButtonClickJob(sender);
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void Button4_Click(object sender, EventArgs e)
         {
             DoButtonClickJob(sender);
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void Button5_Click(object sender, EventArgs e)
         {
             DoButtonClickJob(sender);
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void Button6_Click(object sender, EventArgs e)
         {
             DoButtonClickJob(sender);
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void Button7_Click(object sender, EventArgs e)
         {
             DoButtonClickJob(sender);
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void Button8_Click(object sender, EventArgs e)
         {
             DoButtonClickJob(sender);
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void Button9_Click(object sender, EventArgs e)
         {
             DoButtonClickJob(sender);
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void Button10_Click(object sender, EventArgs e)
         {
             DoButtonClickJob(sender);
         }
@@ -64,62 +64,64 @@ namespace Quick_Paste_Tool
         private void DoButtonClickJob(object sender)
         {
             _currButton = sender as Button;
-            var currPrefSetting = GetPrefSettingByButton(_currButton);
-            if (_isCurrInEditMode)
+            if (_currButton != null)
             {
-                OpenEditFormIfNeed();
-
-                if (_editForm != null)
-                    _editForm.LoadCurrPrefSetting(currPrefSetting);
-            }
-            else
-            {
-                PasteCurrPrefSetting(currPrefSetting);
+                var currPrefSetting = GetPrefSettingByButton(_currButton);
+                if (_isCurrInEditMode)
+                {
+                    OpenEditFormIfNeed();
+                    if (_editForm != null)
+                        _editForm.LoadCurrPrefSetting(currPrefSetting);
+                }
+                else
+                {
+                    PasteCurrPrefSetting(currPrefSetting);
+                }
             }
         }
 
-        private static string GetPrefSettingByButton(Button currButton)
+        private string GetPrefSettingByButton(Button currButton)
         {
             string currPrefSetting = String.Empty;
             switch (currButton.Name)
             {
-                case "button1":
+                case "Button1":
                     currPrefSetting = Properties.Settings.Default.btn1_pref;
                     break;
 
-                case "button2":
+                case "Button2":
                     currPrefSetting = Properties.Settings.Default.btn2_pref;
                     break;
 
-                case "button3":
+                case "Button3":
                     currPrefSetting = Properties.Settings.Default.btn3_pref;
                     break;
 
-                case "button4":
+                case "Button4":
                     currPrefSetting = Properties.Settings.Default.btn4_pref;
                     break;
 
-                case "button5":
+                case "Button5":
                     currPrefSetting = Properties.Settings.Default.btn5_pref;
                     break;
 
-                case "button6":
+                case "Button6":
                     currPrefSetting = Properties.Settings.Default.btn6_pref;
                     break;
 
-                case "button7":
+                case "Button7":
                     currPrefSetting = Properties.Settings.Default.btn7_pref;
                     break;
 
-                case "button8":
+                case "Button8":
                     currPrefSetting = Properties.Settings.Default.btn8_pref;
                     break;
 
-                case "button9":
+                case "Button9":
                     currPrefSetting = Properties.Settings.Default.btn9_pref;
                     break;
 
-                case "button10":
+                case "Button10":
                     currPrefSetting = Properties.Settings.Default.btn10_pref;
                     break;
             }

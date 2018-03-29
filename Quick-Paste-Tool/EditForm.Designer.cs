@@ -50,14 +50,14 @@
             this.GroupBox_EditTemplate.Controls.Add(this.label2);
             this.GroupBox_EditTemplate.Location = new System.Drawing.Point(12, 12);
             this.GroupBox_EditTemplate.Name = "GroupBox_EditTemplate";
-            this.GroupBox_EditTemplate.Size = new System.Drawing.Size(358, 170);
+            this.GroupBox_EditTemplate.Size = new System.Drawing.Size(358, 172);
             this.GroupBox_EditTemplate.TabIndex = 16;
             this.GroupBox_EditTemplate.TabStop = false;
             this.GroupBox_EditTemplate.Text = "編輯範本";
             // 
             // Button_Cancel
             // 
-            this.Button_Cancel.Location = new System.Drawing.Point(297, 141);
+            this.Button_Cancel.Location = new System.Drawing.Point(294, 142);
             this.Button_Cancel.Name = "Button_Cancel";
             this.Button_Cancel.Size = new System.Drawing.Size(52, 23);
             this.Button_Cancel.TabIndex = 16;
@@ -67,7 +67,7 @@
             // 
             // Button_Save
             // 
-            this.Button_Save.Location = new System.Drawing.Point(242, 141);
+            this.Button_Save.Location = new System.Drawing.Point(239, 142);
             this.Button_Save.Name = "Button_Save";
             this.Button_Save.Size = new System.Drawing.Size(52, 23);
             this.Button_Save.TabIndex = 16;
@@ -77,15 +77,15 @@
             // 
             // RichTextBox_Content
             // 
-            this.RichTextBox_Content.Location = new System.Drawing.Point(80, 76);
+            this.RichTextBox_Content.Location = new System.Drawing.Point(84, 77);
             this.RichTextBox_Content.Name = "RichTextBox_Content";
-            this.RichTextBox_Content.Size = new System.Drawing.Size(269, 58);
+            this.RichTextBox_Content.Size = new System.Drawing.Size(262, 58);
             this.RichTextBox_Content.TabIndex = 8;
             this.RichTextBox_Content.Text = "";
             // 
             // TextBox_Title
             // 
-            this.TextBox_Title.Location = new System.Drawing.Point(80, 46);
+            this.TextBox_Title.Location = new System.Drawing.Point(84, 47);
             this.TextBox_Title.Name = "TextBox_Title";
             this.TextBox_Title.Size = new System.Drawing.Size(85, 22);
             this.TextBox_Title.TabIndex = 7;
@@ -94,7 +94,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 79);
+            this.label4.Location = new System.Drawing.Point(16, 80);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 5;
@@ -104,7 +104,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 50);
+            this.label3.Location = new System.Drawing.Point(16, 51);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 4;
@@ -114,21 +114,21 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 23);
+            this.label2.Location = new System.Drawing.Point(10, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 13);
+            this.label2.Size = new System.Drawing.Size(161, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "請先點選要編輯的按鈕";
+            this.label2.Text = "(請先點選要編輯的按鈕)";
             // 
             // EditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 188);
+            this.ClientSize = new System.Drawing.Size(382, 189);
             this.Controls.Add(this.GroupBox_EditTemplate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "EditForm";
-            this.Text = "EditForm";
+            this.Text = "修改範本內容";
             this.GroupBox_EditTemplate.ResumeLayout(false);
             this.GroupBox_EditTemplate.PerformLayout();
             this.ResumeLayout(false);

@@ -14,7 +14,7 @@ namespace Quick_Paste_Tool
         public static MainForm _mainForm = null;
 
         protected override void OnFormClosing(FormClosingEventArgs e)
-        { //預設的關閉按鈕事件
+        { //表單預設的關閉按鈕事件
             base.OnFormClosing(e);
             _mainForm._editForm = null;
         }
@@ -52,13 +52,13 @@ namespace Quick_Paste_Tool
         {
             if (_mainForm._currButton == null)
             {
-                MessageBox.Show("請先點選要修改的按鈕!", "提示", MessageBoxButtons.OK);
+                MessageBox.Show("請先點選要編輯的按鈕!", "提示", MessageBoxButtons.OK);
                 return;
             }
 
             SaveNewPrefSetting();
 
-            _mainForm.LoadPrefSetting();
+            _mainForm.UpdateButtonTitles();
             CloseEditForm();
         }
 
@@ -67,43 +67,43 @@ namespace Quick_Paste_Tool
             var newPrefSetting = String.Format("{0};{1}", TextBox_Title.Text.Trim(), RichTextBox_Content.Text);
             switch (_mainForm._currButton.Name)
             {
-                case "button1":
+                case "Button1":
                     Properties.Settings.Default.btn1_pref = newPrefSetting;
                     break;
 
-                case "button2":
+                case "Button2":
                     Properties.Settings.Default.btn2_pref = newPrefSetting;
                     break;
 
-                case "button3":
+                case "Button3":
                     Properties.Settings.Default.btn3_pref = newPrefSetting;
                     break;
 
-                case "button4":
+                case "Button4":
                     Properties.Settings.Default.btn4_pref = newPrefSetting;
                     break;
 
-                case "button5":
+                case "Button5":
                     Properties.Settings.Default.btn5_pref = newPrefSetting;
                     break;
 
-                case "button6":
+                case "Button6":
                     Properties.Settings.Default.btn6_pref = newPrefSetting;
                     break;
 
-                case "button7":
+                case "Button7":
                     Properties.Settings.Default.btn7_pref = newPrefSetting;
                     break;
 
-                case "button8":
+                case "Button8":
                     Properties.Settings.Default.btn8_pref = newPrefSetting;
                     break;
 
-                case "button9":
+                case "Button9":
                     Properties.Settings.Default.btn9_pref = newPrefSetting;
                     break;
 
-                case "button10":
+                case "Button10":
                     Properties.Settings.Default.btn10_pref = newPrefSetting;
                     break;
             }

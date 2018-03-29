@@ -39,21 +39,34 @@ namespace Quick_Paste_Tool
             CheckBox_StayOnTop.Checked = true;
             RadioButton_RunningMode.Checked = true;
 
-            LoadPrefSetting();
+            UpdateButtonTitles();
         }
 
-        public void LoadPrefSetting()
+        public void UpdateButtonTitles()
         {
-            button1.Text = Properties.Settings.Default.btn1_pref.Split(';')[0];
-            button2.Text = Properties.Settings.Default.btn2_pref.Split(';')[0];
-            button3.Text = Properties.Settings.Default.btn3_pref.Split(';')[0];
-            button4.Text = Properties.Settings.Default.btn4_pref.Split(';')[0];
-            button5.Text = Properties.Settings.Default.btn5_pref.Split(';')[0];
-            button6.Text = Properties.Settings.Default.btn6_pref.Split(';')[0];
-            button7.Text = Properties.Settings.Default.btn7_pref.Split(';')[0];
-            button8.Text = Properties.Settings.Default.btn8_pref.Split(';')[0];
-            button9.Text = Properties.Settings.Default.btn9_pref.Split(';')[0];
-            button10.Text = Properties.Settings.Default.btn10_pref.Split(';')[0];
+            //Update Button Title By User Preference Settings
+            Button1.Text = Properties.Settings.Default.btn1_pref.Split(';')[0];
+            Button2.Text = Properties.Settings.Default.btn2_pref.Split(';')[0];
+            Button3.Text = Properties.Settings.Default.btn3_pref.Split(';')[0];
+            Button4.Text = Properties.Settings.Default.btn4_pref.Split(';')[0];
+            Button5.Text = Properties.Settings.Default.btn5_pref.Split(';')[0];
+            Button6.Text = Properties.Settings.Default.btn6_pref.Split(';')[0];
+            Button7.Text = Properties.Settings.Default.btn7_pref.Split(';')[0];
+            Button8.Text = Properties.Settings.Default.btn8_pref.Split(';')[0];
+            Button9.Text = Properties.Settings.Default.btn9_pref.Split(';')[0];
+            Button10.Text = Properties.Settings.Default.btn10_pref.Split(';')[0];
+
+            //Add Tooltip To Each Button
+            ToolTip_Title.SetToolTip(this.Button1, Button1.Text);
+            ToolTip_Title.SetToolTip(this.Button2, Button2.Text);
+            ToolTip_Title.SetToolTip(this.Button3, Button3.Text);
+            ToolTip_Title.SetToolTip(this.Button4, Button4.Text);
+            ToolTip_Title.SetToolTip(this.Button5, Button5.Text);
+            ToolTip_Title.SetToolTip(this.Button6, Button6.Text);
+            ToolTip_Title.SetToolTip(this.Button7, Button7.Text);
+            ToolTip_Title.SetToolTip(this.Button8, Button8.Text);
+            ToolTip_Title.SetToolTip(this.Button9, Button9.Text);
+            ToolTip_Title.SetToolTip(this.Button10, Button10.Text);
         }
 
         private void CheckBox_StayOnTop_CheckedChanged(object sender, EventArgs e)
